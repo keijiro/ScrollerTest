@@ -10,7 +10,7 @@ public class AppConfig : MonoBehaviour
             switch (mode / 3) {
                 case 0: return Time.deltaTime;
                 case 1: return Time.smoothDeltaTime;
-                default: return 1.0f / 60;
+                default: return 1.0f / 30;
             }
         }
     }
@@ -27,7 +27,7 @@ public class AppConfig : MonoBehaviour
 
     void OnGUI()
     {
-        string[] modeNames = {"deltaTime", "smoothDeltaTime", "1/60s"};
+        string[] modeNames = {"deltaTime", "smoothDeltaTime", "1/30s"};
         GUI.Label(new Rect(0, 0, 200, 100), modeNames[mode / 3]);
     }
 }
